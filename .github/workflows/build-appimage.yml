@@ -21,8 +21,8 @@ jobs:
 
       - name: Build AppImage
         uses: AppImageCrafters/build-appimage@v1
-        with:
-          recipe: appimage-builder.yml
+          with:
+            recipe: appimage-builder.yml
 
       - uses: actions/upload-artifact@v2
         with:
