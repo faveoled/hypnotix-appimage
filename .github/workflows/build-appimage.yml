@@ -19,6 +19,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+      - name: Install squashfs-tools
+        run: |
+          apt-get update && apt-get install -y --no-install-recommends squashfs-tools
+
       - name: Build AppImage
         uses: AppImageCrafters/build-appimage@master
         with:
