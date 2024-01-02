@@ -21,7 +21,7 @@ jobs:
 
       - name: Install squashfs-tools
         run: |
-          apt-get update && apt-get install -y --no-install-recommends squashfs-tools
+          sudo apt-get update && sudo apt-get install -y --no-install-recommends squashfs-tools
 
       - name: Build AppImage
         uses: AppImageCrafters/build-appimage@master
