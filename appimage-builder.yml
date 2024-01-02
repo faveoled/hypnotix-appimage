@@ -1,6 +1,9 @@
 version: 1
 
 script:
+  # https://github.com/AppImageCrafters/build-appimage/issues/5
+  - apt-get update && apt-get install -y --no-install-recommends squashfs-tools
+
   - rm -r ./AppDir || true
 
 AppDir:
